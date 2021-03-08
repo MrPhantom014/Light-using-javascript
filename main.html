@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Light controller</title>
+    <style>
+        body {
+            background-color:black;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #changeit {
+            height: 300px;
+            width: 300px;
+        }
+
+        .btn {
+            position: absolute;
+            height: 35px;
+            left: 60vh;
+            width: 116px;
+            border-radius: 15px;
+            outline: none;
+            border: 3px solid #ff007c;
+            background-color: #3df135;
+            cursor: pointer;
+        }
+
+        .btn1 {
+            position: absolute;
+            left: 65vw;
+            height: 35px;
+            width: 116px;
+            border-radius: 15px;
+            outline: none;
+            border: 3px solid #ff007c;
+            background-color: #3df135;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="LightOff.png" alt="Light On" id="changeit">
+        <button onclick="Lighton()" class="btn">Turn On</button>
+        <button onclick="Lightoff()" class="btn1">Turn off</button>
+    </div>
+    <script>
+        let light = document.getElementById("changeit")
+        function Lighton() {
+            document.getElementById("changeit").src = "LightOn.png";
+        }
+        function Lightoff() {
+            document.getElementById("changeit").src = "LightOff.png";
+        }
+    </script>
+</body>
+
+</html>
